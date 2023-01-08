@@ -115,6 +115,9 @@
            };
         };
 
+        ZMK_COMBO(copy,  &kp LC(C), 24 25, ALL)
+        ZMK_COMBO(paste, &kp LC(V), 25 26, ALL)
+
         conditional_layers {
             compatible = "zmk,conditional-layers";
             tri_layer {
