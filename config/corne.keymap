@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-
+#define HOST_OS 2
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/international_chars/ukrainian.dtsi"
 
@@ -31,12 +31,16 @@
     tapping-term-ms = <180>;
 };
 
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
-
 ZMK_COMBO(copy,  &kp LC(C), 24 25, ALL)
 ZMK_COMBO(paste, &kp LC(V), 25 26, ALL)
 
+// activate macOS-mode for helper script
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
+#define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 
+ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 / {
         behaviors {
             //                 Key positions
