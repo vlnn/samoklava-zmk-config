@@ -17,6 +17,7 @@
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
+#define UA      4
 #define LWR LOWER
 #define RSE RAISE
 #define ADJ ADJUST
@@ -144,7 +145,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
    &none &kp Q        &kp W         &kp E        &kp R         &kp T             &kp Y         &kp U            &kp I           &kp O            &kp P          &none
    &none &hml LALT A  &hml LCMD S   &hml LCTRL D &hml LSHFT F  &kp G             &kp H         &hmr RSHFT J     &hmr RCTRL K    &hmr RCMD L      &hmr RALT SEMI &none
    &none &kp Z        &hml LALT X   &kp C        &kp V         &kp B             &kp N         &kp M            &kp COMMA       &hmr LALT DOT    &kp FSLH       &none
-                                    &lt RSE BSPC &lt LWR ESC   &kp LPAR          &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
+                                    &lt RSE BSPC &lt LWR ESC   &mo UA            &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
                         >;
                 };
                 lower_layer {
@@ -152,7 +153,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
    &none &kp N1       &kp N2       &kp N3        &kp N4        &kp N5            &kp N6        &kp N7           &kp N8           &kp N9          &kp N0          &none
    &none &kp LALT     &kp LCMD     &kp LCTRL     &kp LSHFT     &none             &none         &hmr RSHFT LEFT  &hmr RCTRL DOWN  &hmr RALT UP    &hmr RCMD RIGHT &none
    &none &none        &kp LALT     &none         &kp Y         &none             &kp HOME      &caps_word       &kp PG_DN        &kp PG_UP       &hmr LALT END   &none
-                                   &lt RSE BSPC  &lt LWR ESC   &kp LBKT          &mt RSHFT TAB &mo RSE          &lt LWR SPACE
+                                   &lt RSE BSPC  &lt LWR ESC   &none             &mt RSHFT TAB &mo RSE          &lt LWR SPACE
                         >;
                 };
                 raise_layer {
@@ -160,7 +161,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
    &none &kp EXCL     &kp AT       &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS         &kp KP_MULTIPLY  &kp LPAR        &kp RPAR       &none
    &none &hml LCMD F1 &hml RALT F2 &hml LCTRL F3 &hml LSHFT F4 &kp F5            &kp MINUS     &hmr RSHFT EQUAL &hmr RCTRL LBKT  &hmr RALT RBKT  &hmr RCMD BSLH &none
    &none &kp F6       &hml LALT F7 &kp F8        &kp F9        &kp F10           &kp UNDER     &kp PLUS         &kp LBRC         &kp RBRC        &kp PIPE       &none
-                                   &lt RSE BSPC  &mo LWR       &kp LBRC          &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
+                                   &lt RSE BSPC  &mo LWR       &none             &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
                         >;
                 };
                 adjust_layer {
@@ -171,5 +172,13 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                                    &none         &none         &none             &none         &none            &none
                         >;
                 };
+                ua_layer {
+                         bindings = <
+   &none &ua_i_short  &ua_ts        &ua_u        &ua_k         &ua_e             &ua_n         &ua_h            &ua_sh          &ua_sch          &ua_z          &none
+   &none &hml LALT A  &hml LCMD S   &hml LCTRL D &hml LSHFT F  &kp G             &kp H         &hmr RSHFT J     &hmr RCTRL K    &hmr RCMD L      &hmr RALT SEMI &none
+   &none &kp Z        &hml LALT X   &kp C        &kp V         &kp B             &kp N         &kp M            &kp COMMA       &hmr LALT DOT    &kp FSLH       &none
+                                    &lt RSE BSPC &lt LWR ESC   &mo DEFAULT       &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
+                        >;
+            };
         };
 };
