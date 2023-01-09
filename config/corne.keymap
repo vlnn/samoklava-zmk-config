@@ -9,7 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define HOST_OS 2
+
 #include "../zmk-nodefree-config/helper.h"
+#include "../zmk-nodefree-config/keypos_def/keypos_36keys.h"
 #include "../zmk-nodefree-config/international_chars/ukrainian.dtsi"
 
 
@@ -175,8 +177,8 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
                 ua_layer {
                          bindings = <
    &none &ua_i_short &ua_ts  &ua_u  &ua_k  &ua_e         &ua_n    &ua_h    &ua_sh   &ua_sch  &ua_z   &none
-   &none &ua_f       &ua_y   &ua_v  &ua_a  &ua_p         &ua_r    &ua_o    &ua_l    &ua_d    &ua_zh  &none
-   &none &ua_ya      &ua_ch  &ua_s  &ua_m  &ua_v         &ua_i    &ua_t    &ua_soft &ua_b    &ua_yu  &none
+   &none &ua_f       &ua_i   &ua_v  &ua_a  &ua_p         &ua_r    &ua_o    &ua_l    &ua_d    &ua_zh  &none
+   &none &ua_ya      &ua_ch  &ua_s  &ua_m  &ua_v         &ua_y    &ua_t    &ua_soft &ua_b    &ua_yu  &none
                                    &lt RSE BSPC &lt LWR ESC   &tog DEFAULT      &mt RSHFT TAB &lt RSE RET   &lt LWR SPACE
                         >;
             };
