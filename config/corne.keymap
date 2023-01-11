@@ -33,9 +33,17 @@
     tapping-term-ms = <180>;
 };
 
-ZMK_COMBO(copy,  &kp LC(C), 25 26, ALL)
-ZMK_COMBO(paste, &kp LC(V), 26 27, ALL)
-ZMK_COMBO(esc, &kp ESC, 13 14, ALL)
+ZMK_COMBO(copy,  &kp LG(C), 25 26, ALL)
+ZMK_COMBO(paste, &kp LG(V), 26 27, ALL)
+ZMK_COMBO(escape_combo, &kp ESC, 13 14, ALL)
+ZMK_COMBO(change_layout, &kp LG(SPACE), 16 19, ALL)
+
+ZMK_COMBO(combo_lpar, &kp LPAR, 3 4, ALL, 50)
+ZMK_COMBO(combo_lbrc, &kp LBRC, 4 5, ALL, 50)
+ZMK_COMBO(combo_lbkt, &kp LBKT, 2 3, ALL, 50)
+ZMK_COMBO(combo_rpar, &kp RPAR, 7 8, ALL, 50)
+ZMK_COMBO(combo_rbrc, &kp RBRC, 6 7, ALL, 50)
+ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
 
 // activate macOS-mode for helper script
 #undef OS_UNICODE_LEAD
@@ -43,7 +51,6 @@ ZMK_COMBO(esc, &kp ESC, 13 14, ALL)
 #define OS_UNICODE_LEAD &macro_press &kp LALT  // <- macOS compose sequence (must be activated in system preferences)
 #define OS_UNICODE_TRAIL &macro_release &kp LALT  // <- Releasing Left-Alt terminates unicode input on macOns
 
-ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 / {
         behaviors {
             //                 Key positions
@@ -85,51 +92,7 @@ ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
             };
         };
 
-        Combos {
-           compatible = "zmk,combos";
 
-           combo_lpar {
-              timeout-ms = <50>;
-              key-positions = <3 4>;
-              bindings = <&kp LPAR>;
-           };
-
-           combo_rpar {
-              timeout-ms = <50>;
-              key-positions = <7 8>;
-              bindings = <&kp RPAR>;
-           };
-
-           combo_lbrc {
-              timeout-ms = <50>;
-              key-positions = <4 5>;
-              bindings = <&kp LBRC>;
-           };
-
-           combo_rbrc {
-              timeout-ms = <50>;
-              key-positions = <6 7>;
-              bindings = <&kp RBRC>;
-           };
-
-           combo_lbkt {
-              timeout-ms = <50>;
-              key-positions = <2 3>;
-              bindings = <&kp LBKT>;
-           };
-
-           combo_rbkt {
-              timeout-ms = <50>;
-              key-positions = <8 9>;
-              bindings = <&kp RBKT>;
-           };
-
-           combo_esc {
-              timeout-ms = <50>;
-              key-positions = <14 15 16>;
-              bindings = <&kp ESC>;
-           };
-        };
 
         conditional_layers {
             compatible = "zmk,conditional-layers";
