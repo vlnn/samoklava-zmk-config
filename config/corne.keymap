@@ -33,8 +33,9 @@
     tapping-term-ms = <180>;
 };
 
-ZMK_COMBO(copy,  &kp LC(C), 24 25, ALL)
-ZMK_COMBO(paste, &kp LC(V), 25 26, ALL)
+ZMK_COMBO(copy,  &kp LC(C), 25 26, ALL)
+ZMK_COMBO(paste, &kp LC(V), 26 27, ALL)
+ZMK_COMBO(esc, &kp ESC, 13 14, ALL)
 
 // activate macOS-mode for helper script
 #undef OS_UNICODE_LEAD
