@@ -129,7 +129,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
    &none &ua_i_short &ua_ts  &ua_u  &ua_k  &ua_e         &ua_n    &ua_h    &ua_sh   &ua_sch  &ua_z   &none
    &none &ua_f       &ua_i   &ua_v  &ua_a  &ua_p         &ua_r    &ua_o    &ua_l    &ua_d    &ua_zh  &none
    &none &ua_ya      &ua_ch  &ua_s  &ua_m  &ua_v         &ua_y    &ua_t    &ua_soft &ua_b    &ua_yu  &none
-                     &lt RSE BSPC &lt LWR ESC &tog UA    &to DEFAULT &lt RSE RET  &lt LWR SPACE
+                     &lt RSE BSPC &lt LWR ESC &tog UA    &mt RSHFT TAB &lt RSE RET  &lt LWR SPACE
                         >;
             };
                 lower_layer {
