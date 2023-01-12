@@ -119,7 +119,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
                 default_layer {
                         bindings = <
    &none &kp Q        &kp W         &kp E        &kp R         &kp T             &kp Y         &kp U            &kp I           &kp O            &kp P          &none
-   &none &hml LALT A  &hml LCMD S   &hml LCTRL D &hml LSHFT F  &kp G             &kp H         &hmr RSHFT J     &hmr RCTRL K    &hmr RCMD L      &hmr RALT SEMI &none
+   &none &hml LALT A  &hml LCTRL S   &hml LCMD D &hml LSHFT F  &kp G             &kp H         &hmr RSHFT J     &hmr RCMD K     &hmr RCTRL L      &hmr RALT SEMI &none
    &none &kp Z        &hml LALT X   &kp C        &kp V         &kp B             &kp N         &kp M            &kp COMMA       &hmr LALT DOT    &kp FSLH       &none
                                     &lt RSE BSPC &lt LWR ESC   &tog UA           &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
                         >;
@@ -127,7 +127,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
                 ua_layer {
                          bindings = <
    &none &ua_i_short &ua_ts  &ua_u  &ua_k  &ua_e         &ua_n    &ua_h    &ua_sh   &ua_sch  &ua_z   &none
-   &none &ua_f       &ua_i   &ua_v  &ua_a  &ua_p         &ua_r    &ua_o    &ua_l    &ua_d    &ua_zh  &none
+   &none &ua_f       &ua_i   &ua_v  &kp A  &ua_p         &kp P    &ua_o    &ua_l    &ua_d    &ua_zh  &none
    &none &ua_ya      &ua_ch  &ua_s  &ua_m  &ua_v         &ua_y    &ua_t    &ua_soft &ua_b    &ua_yu  &none
                      &lt RSE BSPC &lt LWR ESC &tog UA    &mt RSHFT TAB &lt RSE RET  &lt LWR SPACE
                         >;
@@ -135,7 +135,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
                 lower_layer {
                         bindings = <
    &none &kp N1       &kp N2       &kp N3        &kp N4        &kp N5            &kp N6        &kp N7           &kp N8           &kp N9          &kp N0          &none
-   &none &kp LALT     &kp LCMD     &kp LCTRL     &kp LSHFT     &none             &none         &hmr RSHFT LEFT  &hmr RCTRL DOWN  &hmr RALT UP    &hmr RCMD RIGHT &none
+   &none &kp LALT     &kp LCTRL     &kp LCMD     &kp LSHFT     &none             &none         &hmr RSHFT LEFT  &hmr RCMD DOWN   &hmr RCTRL UP   &hmr RALT RIGHT &none
    &none &none        &kp LALT     &none         &kp Y         &none             &kp HOME      &caps_word       &kp PG_DN        &kp PG_UP       &hmr LALT END   &none
                                    &lt RSE BSPC  &lt LWR ESC   &none             &mt RSHFT TAB &mo RSE          &lt LWR SPACE
                         >;
@@ -143,7 +143,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
                 raise_layer {
                         bindings = <
    &none &kp EXCL     &kp AT       &kp HASH      &kp DLLR      &kp PRCNT         &kp CARET     &kp AMPS         &kp KP_MULTIPLY  &kp LPAR        &kp RPAR       &none
-   &none &hml LCMD F1 &hml RALT F2 &hml LCTRL F3 &hml LSHFT F4 &kp F5            &kp MINUS     &hmr RSHFT EQUAL &hmr RCTRL LBKT  &hmr RALT RBKT  &hmr RCMD BSLH &none
+   &none &hml LALT F1 &hml LCTRL F2 &hml LCMD F3 &hml LSHFT F4 &kp F5            &kp MINUS     &hmr RSHFT EQUAL &hmr RCMD LBKT   &hmr RCTRL RBKT &hmr RALT BSLH &none
    &none &kp F6       &hml LALT F7 &kp F8        &kp F9        &kp F10           &kp UNDER     &kp PLUS         &kp LBRC         &kp RBRC        &kp PIPE       &none
                                    &lt RSE BSPC  &mo LWR       &none             &mt RSHFT TAB &lt RSE RET      &lt LWR SPACE
                         >;
