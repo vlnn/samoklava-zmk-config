@@ -34,7 +34,6 @@
 // COPY_PASTE around usual pinky-driven keys
 ZMK_COMBO(copy,  &kp LG(C), 25 26, ALL)
 ZMK_COMBO(paste, &kp LG(V), 26 27, ALL)
-ZMK_COMBO(change_layout, &kp LG(SPACE), 16 19, ALL)
 
 // ESC is everywhere I can think of
 ZMK_COMBO(escape_combo, &kp ESC, 15 16, ALL)
