@@ -6,7 +6,7 @@ ZMK_UNICODE_PAIR(ua_h,              N0, N4, N3, N3,   N0, N4, N1, N3) // г/Г
 ZMK_UNICODE_PAIR(ua_g,              N0, N4, N9, N1,   N0, N4, N9, N0) // ґ/Ґ
 ZMK_UNICODE_PAIR(ua_d,              N0, N4, N3, N4,   N0, N4, N1, N4) // д/Д
 ZMK_UNICODE_PAIR(ua_e,              N0, N4, N3, N5,   N0, N4, N1, N5) // е/Е
-ZMK_UNICODE_PAIR(ua_ie,             N0, N4, N3, N5,   N0, N4, N1, N5) // є/Є
+ZMK_UNICODE_PAIR(ua_ie,             N0, N4, N5, N4,   N0, N4, N0, N4) // є/Є
 ZMK_UNICODE_PAIR(ua_zh,             N0, N4, N3, N6,   N0, N4, N1, N6) // ж/Ж
 ZMK_UNICODE_PAIR(ua_z,              N0, N4, N3, N7,   N0, N4, N1, N7) // з/З
 ZMK_UNICODE_PAIR(ua_y,              N0, N4, N3, N8,   N0, N4, N1, N8) // и/И
