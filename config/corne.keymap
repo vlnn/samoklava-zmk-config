@@ -31,10 +31,14 @@
     tapping-term-ms = <180>;
 };
 
+// COPY_PASTE around usual pinky-driven keys
 ZMK_COMBO(copy,  &kp LG(C), 25 26, ALL)
 ZMK_COMBO(paste, &kp LG(V), 26 27, ALL)
-ZMK_COMBO(escape_combo, &kp ESC, 13 14, ALL)
 ZMK_COMBO(change_layout, &kp LG(SPACE), 16 19, ALL)
+
+// ESC is everywhere I can think of
+ZMK_COMBO(escape_combo, &kp ESC, 13 14 15, ALL)
+ZMK_COMBO(escape_combo, &kp ESC, 13 14, ALL)
 
 ZMK_COMBO(combo_lpar, &kp LPAR, 3 4, ALL, 50)
 ZMK_COMBO(combo_lbrc, &kp LBRC, 4 5, ALL, 50)
@@ -42,6 +46,8 @@ ZMK_COMBO(combo_lbkt, &kp LBKT, 2 3, ALL, 50)
 ZMK_COMBO(combo_rpar, &kp RPAR, 7 8, ALL, 50)
 ZMK_COMBO(combo_rbrc, &kp RBRC, 6 7, ALL, 50)
 ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
+
+ZMK_COMBO(combo_rbkt, &kp SINGLE_QUOTE, 9 10, ALL, 50) // quotes single and coupled :love:
 
 // activate macOS-mode for helper script
 #undef OS_UNICODE_LEAD
@@ -150,7 +156,7 @@ ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
                 };
                 adjust_layer {
                         bindings = <
-   &none &bt BT_CLR   &none        &ua_g         &none         &none             &none         &kp K_MUTE       &none            &none           &bootloader    &none
+   &none &bt BT_CLR   &none        &ua_ie        &none         &none             &none         &ua_g            &none            &none           &bootloader    &none
    &none &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &kp C_BRI_UP  &kp C_VOL_UP     &none            &none           &reset         &none
    &none &none        &none        &none         &none         &none             &kp C_BRI_DN  &kp C_VOL_DN     &none            &none           &none          &none
                                    &none         &none         &none             &none         &none            &none
