@@ -36,9 +36,10 @@ ZMK_COMBO(copy,  &kp LG(C), 25 26, ALL)
 ZMK_COMBO(paste, &kp LG(V), 26 27, ALL)
 
 // ESC is everywhere I can think of
-ZMK_COMBO(escape_combo, &kp ESC, 15 16, ALL)
-ZMK_COMBO(escape_combo, &kp ESC, 14 15, ALL)
-ZMK_COMBO(escape_combo, &kp ESC, 13 14, ALL)
+ZMK_COMBO(escape_combo, &kp ESC, 1 2, ALL)
+ZMK_COMBO(escape_combo2, &kp ESC, 13 14, ALL)
+ZMK_COMBO(escape_combo3, &kp ESC, 14 15 16, ALL)
+ZMK_COMBO(escape_combo4, &kp ESC, 13 14 15 16, ALL)
 
 ZMK_COMBO(combo_lpar, &kp LPAR, 3 4, ALL, 50)
 ZMK_COMBO(combo_lbrc, &kp LBRC, 4 5, ALL, 50)
@@ -47,7 +48,9 @@ ZMK_COMBO(combo_rpar, &kp RPAR, 7 8, ALL, 50)
 ZMK_COMBO(combo_rbrc, &kp RBRC, 6 7, ALL, 50)
 ZMK_COMBO(combo_rbkt, &kp RBKT, 8 9, ALL, 50)
 
-ZMK_COMBO(combo_rbkt, &kp SINGLE_QUOTE, 9 10, ALL, 50) // quotes single and coupled :love:
+ZMK_COMBO(combo_quote, &kp SINGLE_QUOTE, 9 10, ALL, 50) // quotes single and coupled :love:
+
+ZMK_COMBO(combo_ua_kh, &ua_kh, 21 22, ALL, 50) // no keys left for ua_kh, so it gets whole combo :confused:
 
 // activate macOS-mode for helper script
 #undef OS_UNICODE_LEAD
